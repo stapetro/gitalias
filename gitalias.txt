@@ -911,7 +911,7 @@
   #
   # TODO: handle tags, delete superfluous branches, and add error handing.
   #
-  get = !git fetch --prune && git pull --rebase && git submodule update --init --recursive
+  get = !git fetch --prune --prune-tags && git pull --rebase && git submodule update --init --recursive
   put = !git commit --all && git push
 
   # Do everything we can to make the local repo like the master branch.
